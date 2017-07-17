@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B77FBB61F1D03FF008BAC33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77FBB51F1D03FF008BAC33 /* AppDelegate.swift */; };
+		9B77FBB81F1D03FF008BAC33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77FBB71F1D03FF008BAC33 /* ViewController.swift */; };
+		9B77FBBB1F1D03FF008BAC33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B77FBB91F1D03FF008BAC33 /* Main.storyboard */; };
+		9B77FBBD1F1D03FF008BAC33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B77FBBC1F1D03FF008BAC33 /* Assets.xcassets */; };
+		9B77FBC01F1D03FF008BAC33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B77FBBE1F1D03FF008BAC33 /* LaunchScreen.storyboard */; };
+		9B77FBC51F1D03FF008BAC33 /* igMadWorkout_Soares WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9B77FBC41F1D03FF008BAC33 /* igMadWorkout_Soares WatchKit App.app */; };
+		9B77FBCB1F1D03FF008BAC33 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B77FBC91F1D03FF008BAC33 /* Interface.storyboard */; };
+		9B77FBCD1F1D03FF008BAC33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B77FBCC1F1D03FF008BAC33 /* Assets.xcassets */; };
+		9B77FBD41F1D03FF008BAC33 /* igMadWorkout_Soares WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9B77FBD31F1D03FF008BAC33 /* igMadWorkout_Soares WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9B77FBD91F1D03FF008BAC33 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77FBD81F1D03FF008BAC33 /* InterfaceController.swift */; };
+		9B77FBDB1F1D03FF008BAC33 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77FBDA1F1D03FF008BAC33 /* ExtensionDelegate.swift */; };
+		9B77FBDD1F1D03FF008BAC33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B77FBDC1F1D03FF008BAC33 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9B77FBC61F1D03FF008BAC33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B77FBAA1F1D03FF008BAC33 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B77FBC31F1D03FF008BAC33;
+			remoteInfo = "igMadWorkout_Soares WatchKit App";
+		};
+		9B77FBD51F1D03FF008BAC33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B77FBAA1F1D03FF008BAC33 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B77FBD21F1D03FF008BAC33;
+			remoteInfo = "igMadWorkout_Soares WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9B77FBE41F1D03FF008BAC33 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9B77FBD41F1D03FF008BAC33 /* igMadWorkout_Soares WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B77FBE81F1D03FF008BAC33 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				9B77FBC51F1D03FF008BAC33 /* igMadWorkout_Soares WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9B77FBB21F1D03FF008BAC33 /* igMadWorkout_Soares.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = igMadWorkout_Soares.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B77FBB51F1D03FF008BAC33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9B77FBB71F1D03FF008BAC33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9B77FBBA1F1D03FF008BAC33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9B77FBBC1F1D03FF008BAC33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B77FBBF1F1D03FF008BAC33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9B77FBC11F1D03FF008BAC33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B77FBC41F1D03FF008BAC33 /* igMadWorkout_Soares WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "igMadWorkout_Soares WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B77FBCA1F1D03FF008BAC33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		9B77FBCC1F1D03FF008BAC33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B77FBCE1F1D03FF008BAC33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B77FBD31F1D03FF008BAC33 /* igMadWorkout_Soares WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "igMadWorkout_Soares WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B77FBD81F1D03FF008BAC33 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		9B77FBDA1F1D03FF008BAC33 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		9B77FBDC1F1D03FF008BAC33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B77FBDE1F1D03FF008BAC33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9B77FBAF1F1D03FF008BAC33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B77FBD01F1D03FF008BAC33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9B77FBA91F1D03FF008BAC33 = {
+			isa = PBXGroup;
+			children = (
+				9B77FBB41F1D03FF008BAC33 /* igMadWorkout_Soares */,
+				9B77FBC81F1D03FF008BAC33 /* igMadWorkout_Soares WatchKit App */,
+				9B77FBD71F1D03FF008BAC33 /* igMadWorkout_Soares WatchKit Extension */,
+				9B77FBB31F1D03FF008BAC33 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9B77FBB31F1D03FF008BAC33 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B77FBB21F1D03FF008BAC33 /* igMadWorkout_Soares.app */,
+				9B77FBC41F1D03FF008BAC33 /* igMadWorkout_Soares WatchKit App.app */,
+				9B77FBD31F1D03FF008BAC33 /* igMadWorkout_Soares WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9B77FBB41F1D03FF008BAC33 /* igMadWorkout_Soares */ = {
+			isa = PBXGroup;
+			children = (
+				9B77FBB51F1D03FF008BAC33 /* AppDelegate.swift */,
+				9B77FBB71F1D03FF008BAC33 /* ViewController.swift */,
+				9B77FBB91F1D03FF008BAC33 /* Main.storyboard */,
+				9B77FBBC1F1D03FF008BAC33 /* Assets.xcassets */,
+				9B77FBBE1F1D03FF008BAC33 /* LaunchScreen.storyboard */,
+				9B77FBC11F1D03FF008BAC33 /* Info.plist */,
+			);
+			path = igMadWorkout_Soares;
+			sourceTree = "<group>";
+		};
+		9B77FBC81F1D03FF008BAC33 /* igMadWorkout_Soares WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				9B77FBC91F1D03FF008BAC33 /* Interface.storyboard */,
+				9B77FBCC1F1D03FF008BAC33 /* Assets.xcassets */,
+				9B77FBCE1F1D03FF008BAC33 /* Info.plist */,
+			);
+			path = "igMadWorkout_Soares WatchKit App";
+			sourceTree = "<group>";
+		};
+		9B77FBD71F1D03FF008BAC33 /* igMadWorkout_Soares WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9B77FBD81F1D03FF008BAC33 /* InterfaceController.swift */,
+				9B77FBDA1F1D03FF008BAC33 /* ExtensionDelegate.swift */,
+				9B77FBDC1F1D03FF008BAC33 /* Assets.xcassets */,
+				9B77FBDE1F1D03FF008BAC33 /* Info.plist */,
+			);
+			path = "igMadWorkout_Soares WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9B77FBB11F1D03FF008BAC33 /* igMadWorkout_Soares */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B77FBE91F1D03FF008BAC33 /* Build configuration list for PBXNativeTarget "igMadWorkout_Soares" */;
+			buildPhases = (
+				9B77FBAE1F1D03FF008BAC33 /* Sources */,
+				9B77FBAF1F1D03FF008BAC33 /* Frameworks */,
+				9B77FBB01F1D03FF008BAC33 /* Resources */,
+				9B77FBE81F1D03FF008BAC33 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B77FBC71F1D03FF008BAC33 /* PBXTargetDependency */,
+			);
+			name = igMadWorkout_Soares;
+			productName = igMadWorkout_Soares;
+			productReference = 9B77FBB21F1D03FF008BAC33 /* igMadWorkout_Soares.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9B77FBC31F1D03FF008BAC33 /* igMadWorkout_Soares WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B77FBE51F1D03FF008BAC33 /* Build configuration list for PBXNativeTarget "igMadWorkout_Soares WatchKit App" */;
+			buildPhases = (
+				9B77FBC21F1D03FF008BAC33 /* Resources */,
+				9B77FBE41F1D03FF008BAC33 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B77FBD61F1D03FF008BAC33 /* PBXTargetDependency */,
+			);
+			name = "igMadWorkout_Soares WatchKit App";
+			productName = "igMadWorkout_Soares WatchKit App";
+			productReference = 9B77FBC41F1D03FF008BAC33 /* igMadWorkout_Soares WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		9B77FBD21F1D03FF008BAC33 /* igMadWorkout_Soares WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B77FBE11F1D03FF008BAC33 /* Build configuration list for PBXNativeTarget "igMadWorkout_Soares WatchKit Extension" */;
+			buildPhases = (
+				9B77FBCF1F1D03FF008BAC33 /* Sources */,
+				9B77FBD01F1D03FF008BAC33 /* Frameworks */,
+				9B77FBD11F1D03FF008BAC33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "igMadWorkout_Soares WatchKit Extension";
+			productName = "igMadWorkout_Soares WatchKit Extension";
+			productReference = 9B77FBD31F1D03FF008BAC33 /* igMadWorkout_Soares WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9B77FBAA1F1D03FF008BAC33 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Diana;
+				TargetAttributes = {
+					9B77FBB11F1D03FF008BAC33 = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+					};
+					9B77FBC31F1D03FF008BAC33 = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+					};
+					9B77FBD21F1D03FF008BAC33 = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 9B77FBAD1F1D03FF008BAC33 /* Build configuration list for PBXProject "igMadWorkout_Soares" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9B77FBA91F1D03FF008BAC33;
+			productRefGroup = 9B77FBB31F1D03FF008BAC33 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9B77FBB11F1D03FF008BAC33 /* igMadWorkout_Soares */,
+				9B77FBC31F1D03FF008BAC33 /* igMadWorkout_Soares WatchKit App */,
+				9B77FBD21F1D03FF008BAC33 /* igMadWorkout_Soares WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9B77FBB01F1D03FF008BAC33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B77FBC01F1D03FF008BAC33 /* LaunchScreen.storyboard in Resources */,
+				9B77FBBD1F1D03FF008BAC33 /* Assets.xcassets in Resources */,
+				9B77FBBB1F1D03FF008BAC33 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B77FBC21F1D03FF008BAC33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B77FBCD1F1D03FF008BAC33 /* Assets.xcassets in Resources */,
+				9B77FBCB1F1D03FF008BAC33 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B77FBD11F1D03FF008BAC33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B77FBDD1F1D03FF008BAC33 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9B77FBAE1F1D03FF008BAC33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B77FBB81F1D03FF008BAC33 /* ViewController.swift in Sources */,
+				9B77FBB61F1D03FF008BAC33 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B77FBCF1F1D03FF008BAC33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B77FBDB1F1D03FF008BAC33 /* ExtensionDelegate.swift in Sources */,
+				9B77FBD91F1D03FF008BAC33 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9B77FBC71F1D03FF008BAC33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B77FBC31F1D03FF008BAC33 /* igMadWorkout_Soares WatchKit App */;
+			targetProxy = 9B77FBC61F1D03FF008BAC33 /* PBXContainerItemProxy */;
+		};
+		9B77FBD61F1D03FF008BAC33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B77FBD21F1D03FF008BAC33 /* igMadWorkout_Soares WatchKit Extension */;
+			targetProxy = 9B77FBD51F1D03FF008BAC33 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9B77FBB91F1D03FF008BAC33 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B77FBBA1F1D03FF008BAC33 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9B77FBBE1F1D03FF008BAC33 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B77FBBF1F1D03FF008BAC33 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9B77FBC91F1D03FF008BAC33 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B77FBCA1F1D03FF008BAC33 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9B77FBDF1F1D03FF008BAC33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9B77FBE01F1D03FF008BAC33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9B77FBE21F1D03FF008BAC33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				INFOPLIST_FILE = "igMadWorkout_Soares WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "C1.igMadWorkout-Soares.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		9B77FBE31F1D03FF008BAC33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				INFOPLIST_FILE = "igMadWorkout_Soares WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "C1.igMadWorkout-Soares.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
+		9B77FBE61F1D03FF008BAC33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = igMadWorkout_Soares_WatchKit_Extension;
+				INFOPLIST_FILE = "igMadWorkout_Soares WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "C1.igMadWorkout-Soares.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		9B77FBE71F1D03FF008BAC33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = igMadWorkout_Soares_WatchKit_Extension;
+				INFOPLIST_FILE = "igMadWorkout_Soares WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "C1.igMadWorkout-Soares.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
+		9B77FBEA1F1D03FF008BAC33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = igMadWorkout_Soares/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "C1.igMadWorkout-Soares";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9B77FBEB1F1D03FF008BAC33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = igMadWorkout_Soares/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "C1.igMadWorkout-Soares";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9B77FBAD1F1D03FF008BAC33 /* Build configuration list for PBXProject "igMadWorkout_Soares" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B77FBDF1F1D03FF008BAC33 /* Debug */,
+				9B77FBE01F1D03FF008BAC33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B77FBE11F1D03FF008BAC33 /* Build configuration list for PBXNativeTarget "igMadWorkout_Soares WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B77FBE21F1D03FF008BAC33 /* Debug */,
+				9B77FBE31F1D03FF008BAC33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9B77FBE51F1D03FF008BAC33 /* Build configuration list for PBXNativeTarget "igMadWorkout_Soares WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B77FBE61F1D03FF008BAC33 /* Debug */,
+				9B77FBE71F1D03FF008BAC33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9B77FBE91F1D03FF008BAC33 /* Build configuration list for PBXNativeTarget "igMadWorkout_Soares" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B77FBEA1F1D03FF008BAC33 /* Debug */,
+				9B77FBEB1F1D03FF008BAC33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9B77FBAA1F1D03FF008BAC33 /* Project object */;
+}
