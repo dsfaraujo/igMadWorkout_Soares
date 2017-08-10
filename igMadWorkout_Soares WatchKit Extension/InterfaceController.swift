@@ -11,7 +11,7 @@ import Foundation
 import WatchConnectivity
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
-    
+    @IBOutlet var messageLabel: WKInterfaceLabel!
     var session : WCSession!
     //-----------
     var conversation: String = ""
@@ -39,6 +39,33 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         //..code
     }
-
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        //-----------
+        // Message du téléphone
+        let value = message["Message"] as? String
+        conversation += value!
+        //-----------
+        DispatchQueue.main.async { () -> Void in
+            // Affichage sur montre
+            self.messageLabel.setText(self.conversation)
+        }
+        //-----------
+        replyHandler(["Message" : conversation])
+        //-----------
+    }
+    //--------------------------------------------------
+    func sendMessage() {
+        presentTextInputController(withSuggestions: ["Bonjour"], allowedInputMode: WKTextInputMode.plain,
+                                   completion: {(results) -> Void in
+                                    if results != nil && results!.count > 0 {
+                                        let aResult = results?[0] as? String
+                                        self.conversation += "Watch : \(aResult!)\n\n"
+                                        self.messageLabel.setText(self.conversation)
+                                        self.session.sendMessage(["Message" : self.conversation],
+                                                                 replyHandler: {replyMessage in}, errorHandler: {error in print(error)})
+                                    }
+        })
+    }
+    //--------------------------------------------------
    
 }

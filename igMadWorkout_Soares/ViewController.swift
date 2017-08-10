@@ -32,7 +32,7 @@ class ViewController: UIViewController, WCSessionDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         super.viewDidLoad()
         
-        if (WCSession.isSupported())
+       /* if (WCSession.isSupported())
         {
             self.session = WCSession.default()
             self.session!.delegate = self
@@ -42,7 +42,7 @@ class ViewController: UIViewController, WCSessionDelegate {
             {
                 self.theSynchButton.alpha = 0.0
             }
-        }
+        }*/
         
         self.theExercise = ""
         Shared.sharedInstance.saveOrLoadUserDefaults("db")
