@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B5A31B91F3CA37700CAC48E /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5A31B51F3CA37700CAC48E /* EditView.swift */; };
+		9B5A31BA1F3CA37700CAC48E /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5A31B61F3CA37700CAC48E /* WorkoutsView.swift */; };
+		9B5A31BB1F3CA37700CAC48E /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5A31B71F3CA37700CAC48E /* Shared.swift */; };
+		9B5A31BC1F3CA37700CAC48E /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5A31B81F3CA37700CAC48E /* InfoView.swift */; };
 		9B77FBB61F1D03FF008BAC33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77FBB51F1D03FF008BAC33 /* AppDelegate.swift */; };
 		9B77FBB81F1D03FF008BAC33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77FBB71F1D03FF008BAC33 /* ViewController.swift */; };
 		9B77FBBB1F1D03FF008BAC33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B77FBB91F1D03FF008BAC33 /* Main.storyboard */; };
@@ -19,6 +23,14 @@
 		9B77FBD91F1D03FF008BAC33 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77FBD81F1D03FF008BAC33 /* InterfaceController.swift */; };
 		9B77FBDB1F1D03FF008BAC33 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77FBDA1F1D03FF008BAC33 /* ExtensionDelegate.swift */; };
 		9B77FBDD1F1D03FF008BAC33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B77FBDC1F1D03FF008BAC33 /* Assets.xcassets */; };
+		9B77FBF41F1D0887008BAC33 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B77FBEC1F1D0887008BAC33 /* bg.png */; };
+		9B77FBF51F1D0887008BAC33 /* CaviarDreams_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B77FBED1F1D0887008BAC33 /* CaviarDreams_Bold.ttf */; };
+		9B77FBF61F1D0887008BAC33 /* GeosansLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B77FBEE1F1D0887008BAC33 /* GeosansLight.ttf */; };
+		9B77FBF71F1D0887008BAC33 /* gishabd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B77FBEF1F1D0887008BAC33 /* gishabd.ttf */; };
+		9B77FBF81F1D0887008BAC33 /* icon_watch.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B77FBF01F1D0887008BAC33 /* icon_watch.png */; };
+		9B77FBF91F1D0887008BAC33 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B77FBF11F1D0887008BAC33 /* icon.png */; };
+		9B77FBFA1F1D0887008BAC33 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B77FBF21F1D0887008BAC33 /* Info.plist */; };
+		9B77FBFB1F1D0887008BAC33 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B77FBF31F1D0887008BAC33 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +76,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9B5A31B51F3CA37700CAC48E /* EditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		9B5A31B61F3CA37700CAC48E /* WorkoutsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
+		9B5A31B71F3CA37700CAC48E /* Shared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		9B5A31B81F3CA37700CAC48E /* InfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		9B77FBB21F1D03FF008BAC33 /* igMadWorkout_Soares.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = igMadWorkout_Soares.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B77FBB51F1D03FF008BAC33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B77FBB71F1D03FF008BAC33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +96,14 @@
 		9B77FBDA1F1D03FF008BAC33 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		9B77FBDC1F1D03FF008BAC33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B77FBDE1F1D03FF008BAC33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B77FBEC1F1D0887008BAC33 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = igMadWorkout_Soares/Image/bg.png; sourceTree = "<group>"; };
+		9B77FBED1F1D0887008BAC33 /* CaviarDreams_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = CaviarDreams_Bold.ttf; path = igMadWorkout_Soares/Image/CaviarDreams_Bold.ttf; sourceTree = "<group>"; };
+		9B77FBEE1F1D0887008BAC33 /* GeosansLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = GeosansLight.ttf; path = igMadWorkout_Soares/Image/GeosansLight.ttf; sourceTree = "<group>"; };
+		9B77FBEF1F1D0887008BAC33 /* gishabd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = gishabd.ttf; path = igMadWorkout_Soares/Image/gishabd.ttf; sourceTree = "<group>"; };
+		9B77FBF01F1D0887008BAC33 /* icon_watch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_watch.png; path = igMadWorkout_Soares/Image/icon_watch.png; sourceTree = "<group>"; };
+		9B77FBF11F1D0887008BAC33 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = igMadWorkout_Soares/Image/icon.png; sourceTree = "<group>"; };
+		9B77FBF21F1D0887008BAC33 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = igMadWorkout_Soares/Image/Info.plist; sourceTree = "<group>"; };
+		9B77FBF31F1D0887008BAC33 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = igMadWorkout_Soares/Image/logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +127,8 @@
 		9B77FBA91F1D03FF008BAC33 = {
 			isa = PBXGroup;
 			children = (
+				9B77FBFD1F1D08CD008BAC33 /* Fonts */,
+				9B77FBFC1F1D088F008BAC33 /* Images */,
 				9B77FBB41F1D03FF008BAC33 /* igMadWorkout_Soares */,
 				9B77FBC81F1D03FF008BAC33 /* igMadWorkout_Soares WatchKit App */,
 				9B77FBD71F1D03FF008BAC33 /* igMadWorkout_Soares WatchKit Extension */,
@@ -129,6 +155,10 @@
 				9B77FBBC1F1D03FF008BAC33 /* Assets.xcassets */,
 				9B77FBBE1F1D03FF008BAC33 /* LaunchScreen.storyboard */,
 				9B77FBC11F1D03FF008BAC33 /* Info.plist */,
+				9B5A31B51F3CA37700CAC48E /* EditView.swift */,
+				9B5A31B61F3CA37700CAC48E /* WorkoutsView.swift */,
+				9B5A31B71F3CA37700CAC48E /* Shared.swift */,
+				9B5A31B81F3CA37700CAC48E /* InfoView.swift */,
 			);
 			path = igMadWorkout_Soares;
 			sourceTree = "<group>";
@@ -152,6 +182,28 @@
 				9B77FBDE1F1D03FF008BAC33 /* Info.plist */,
 			);
 			path = "igMadWorkout_Soares WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		9B77FBFC1F1D088F008BAC33 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				9B77FBEC1F1D0887008BAC33 /* bg.png */,
+				9B77FBF01F1D0887008BAC33 /* icon_watch.png */,
+				9B77FBF11F1D0887008BAC33 /* icon.png */,
+				9B77FBF21F1D0887008BAC33 /* Info.plist */,
+				9B77FBF31F1D0887008BAC33 /* logo.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		9B77FBFD1F1D08CD008BAC33 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9B77FBED1F1D0887008BAC33 /* CaviarDreams_Bold.ttf */,
+				9B77FBEE1F1D0887008BAC33 /* GeosansLight.ttf */,
+				9B77FBEF1F1D0887008BAC33 /* gishabd.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +274,7 @@
 				TargetAttributes = {
 					9B77FBB11F1D03FF008BAC33 = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = CK794M2HG3;
 						ProvisioningStyle = Automatic;
 					};
 					9B77FBC31F1D03FF008BAC33 = {
@@ -259,9 +312,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B77FBF81F1D0887008BAC33 /* icon_watch.png in Resources */,
+				9B77FBF61F1D0887008BAC33 /* GeosansLight.ttf in Resources */,
+				9B77FBFB1F1D0887008BAC33 /* logo.png in Resources */,
+				9B77FBF91F1D0887008BAC33 /* icon.png in Resources */,
 				9B77FBC01F1D03FF008BAC33 /* LaunchScreen.storyboard in Resources */,
 				9B77FBBD1F1D03FF008BAC33 /* Assets.xcassets in Resources */,
+				9B77FBF51F1D0887008BAC33 /* CaviarDreams_Bold.ttf in Resources */,
+				9B77FBF41F1D0887008BAC33 /* bg.png in Resources */,
 				9B77FBBB1F1D03FF008BAC33 /* Main.storyboard in Resources */,
+				9B77FBFA1F1D0887008BAC33 /* Info.plist in Resources */,
+				9B77FBF71F1D0887008BAC33 /* gishabd.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,8 +350,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B5A31BB1F3CA37700CAC48E /* Shared.swift in Sources */,
 				9B77FBB81F1D03FF008BAC33 /* ViewController.swift in Sources */,
 				9B77FBB61F1D03FF008BAC33 /* AppDelegate.swift in Sources */,
+				9B5A31BA1F3CA37700CAC48E /* WorkoutsView.swift in Sources */,
+				9B5A31BC1F3CA37700CAC48E /* InfoView.swift in Sources */,
+				9B5A31B91F3CA37700CAC48E /* EditView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +574,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CK794M2HG3;
 				INFOPLIST_FILE = igMadWorkout_Soares/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "C1.igMadWorkout-Soares";
@@ -521,6 +587,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CK794M2HG3;
 				INFOPLIST_FILE = igMadWorkout_Soares/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "C1.igMadWorkout-Soares";
@@ -548,6 +615,7 @@
 				9B77FBE31F1D03FF008BAC33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B77FBE51F1D03FF008BAC33 /* Build configuration list for PBXNativeTarget "igMadWorkout_Soares WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +624,7 @@
 				9B77FBE71F1D03FF008BAC33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B77FBE91F1D03FF008BAC33 /* Build configuration list for PBXNativeTarget "igMadWorkout_Soares" */ = {
 			isa = XCConfigurationList;
@@ -564,6 +633,7 @@
 				9B77FBEB1F1D03FF008BAC33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
