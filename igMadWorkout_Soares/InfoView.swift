@@ -1,12 +1,13 @@
 // ============================
 import UIKit
 // ============================
-class InfoView: UIViewController
-{
+class InfoView: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // ============================
     @IBOutlet weak var infoDateLabel: UILabel!
     @IBOutlet weak var theTableView: UITableView!
     @IBOutlet weak var reorderButton: UIButton!
+
+    
     var theDatabase: [String : [[String : String]]]!
     var theWorkout: [String]!
     // ============================
@@ -18,8 +19,8 @@ class InfoView: UIViewController
         self.theWorkout = self.fillUpWorkoutArray(self.infoDateLabel.text!)
     }
     // ============================
-    @IBAction func reorder(_ sender: UIButton)
-    {
+
+    @IBAction func reorder(_ sender: UIButton) {
         if !self.theTableView.isEditing
         {
             self.theTableView.isEditing = true
@@ -31,6 +32,7 @@ class InfoView: UIViewController
             self.reorderButton.setTitle("EDIT", for: UIControlState())
         }
     }
+
     // ============================
     func fillUpWorkoutArray(_ theDate: String) -> [String]
     {
@@ -72,13 +74,12 @@ class InfoView: UIViewController
         super.didReceiveMemoryWarning()
     }
     // ============================
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         self.theTableView.backgroundColor = UIColor.clear
         return self.theWorkout.count
     }
     // ============================
-    func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier:"cell")
         cell.textLabel!.font = UIFont(name: "Caviar Dreams", size: 14.0)
@@ -90,8 +91,7 @@ class InfoView: UIViewController
         return cell
     }
     // ============================
-    func tableView(_ tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: IndexPath)
-    {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCellEditingStyle.delete
         {
             self.theWorkout.remove(at: indexPath.row)
@@ -116,13 +116,13 @@ class InfoView: UIViewController
         }
     }
     // ============================
-    func tableView(_ tableView: UITableView, canMoveRowAtIndexPath indexPath: IndexPath) -> Bool
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool
     {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
     // ============================
-    func tableView(_ tableView: UITableView, moveRowAtIndexPath fromIndexPath: IndexPath, toIndexPath: IndexPath)
+    @objc(tableView:moveRowAtIndexPath:toIndexPath:) func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to toIndexPath: IndexPath)
     {
         let itemToMove = self.theDatabase[self.infoDateLabel.text!]?[fromIndexPath.row]
         self.theDatabase[self.infoDateLabel.text!]?.remove(at: fromIndexPath.row)

@@ -9,7 +9,7 @@
 import UIKit
 import WatchConnectivity
 // ============================
-class ViewController: UIViewController, WCSessionDelegate {
+class ViewController: UIViewController, WCSessionDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     // ============================
     @IBOutlet weak var theDatePicker: UIDatePicker!
     @IBOutlet weak var thePickerView: UIPickerView!
@@ -30,18 +30,15 @@ class ViewController: UIViewController, WCSessionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        super.viewDidLoad()
+        thePickerView.delegate = self
+        thePickerView.dataSource = self
         
        /* if (WCSession.isSupported())
         {
-            self.session = WCSession.default()
-            self.session!.delegate = self
-            self.session!.activate()
-            
-            if !session.isPaired
-            {
-                self.theSynchButton.alpha = 0.0
-            }
+            session = WCSession.default()
+            session!.delegate = self
+            session!.activate()
+         
         }*/
         
         self.theExercise = ""
@@ -76,47 +73,36 @@ class ViewController: UIViewController, WCSessionDelegate {
     // ============================
     @IBAction func sendToWatch(_ sender: AnyObject)
     {
-        let databaseToSendToWatch = Shared.sharedInstance.getDatabase("db")
-        session.sendMessage(databaseToSendToWatch, replyHandler:
-            { replyMessage in },
-                            errorHandler:
-            {
-                error in
-                // catch any errors here
-                print(error)
-        })
-        //sendMessage()
+        var dictToSendWatch: [String: String] = [:]
+        
+        for aWorkout in Shared.sharedInstance.theDatabase{
+            let aDate = aWorkout.0
+            let aExercise = aWorkout.1
+            var str = ""
+            for i in 0..<exercises.count {
+                let exerc = Array(exercises[i].keys)[0]
+                str += "\(exercises[i][exerc]!)\n"
+            }
+            dictToSendWatch[aDate] = str
+        }
+        sendMessage(aDict: dictToSendWatch)
     }
     // ============================
-    /*func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
-        //-----------
-        // Message envoyé par la montre
-        let value = message["Message"] as? String
-        //-----------
-        DispatchQueue.main.async { () -> Void in
-            // Affichage sur téléphone
-            self.replyLabel.text = value
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        DispatchQueue.main.async {
+            () -> Void in
         }
-        //-----------
-        // Message automatique envoyé à la montre
-        // replyHandler(["Message" : "Un message"])
-        //-----------
     }
      // ============================
     func sendMessage(){
         //-----------
         // Message envoyé par le téléphone
-        let messageToSend = ["Message" : "Phone : \(messageField.text!)\n\n"]
+        let messageToSend = ["Message" : aDict]
         //-----------
         session.sendMessage(messageToSend, replyHandler: { (replyMessage) in
-            //-----------
-            // Message automatique de la montre
-            let value = replyMessage["Message"] as? String
-            //-----------
+          
             DispatchQueue.main.async(execute: { () -> Void in
-                // Affichage sur téléphone
-                self.replyLabel.text = value
-                self.messageField.text = ""
+               
             })
             //-----------
         }) { (error) in
@@ -143,9 +129,9 @@ class ViewController: UIViewController, WCSessionDelegate {
     // ============================
     fileprivate func saveUserDefaultIfNeeded()
     {
-        /*self.exerciseAccount.removeObject(forKey: "exercises")
+        //self.exerciseAccount.removeObject(forKey: "exercises")
         
-        if !self.checkForUserDefaultByName("exercises", andUserDefaultObject: self.exerciseAccountability)
+       /* if !self.checkForUserDefaultByName("exercises", andUserDefaultObject: self.exerciseAccountability)
         {
             self.exerciseAccountability.setValue(self.exerciseAccountability, forKey: "exercises")
         }
@@ -166,13 +152,12 @@ class ViewController: UIViewController, WCSessionDelegate {
         
         return true
     }
-    // ============================
-    func numberOfComponentsInPickerView(_ pickerView: UIPickerView) -> Int
+    func numberOfComponents(in pickerView: UIPickerView) -> Int
     {
         return 1
     }
     // ============================
-    @objc(pickerView:viewForRow:forComponent:reusingView:) func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView
     {
         let pickerLabel = UILabel()
         var anArrayOfString = ["- CHOOSE EXERCISE -"]
@@ -187,9 +172,11 @@ class ViewController: UIViewController, WCSessionDelegate {
             anArrayOfString.append(tempStr)
         }
         
-        
         let titleData = anArrayOfString[row]
-        pickerLabel.text = titleData
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Caviar Dreams", size: 18.0)!,
+                                                                         NSForegroundColorAttributeName:UIColor.white])
+        pickerLabel.textAlignment = NSTextAlignment.center
+        pickerLabel.attributedText = myTitle
         
         return pickerLabel
     }

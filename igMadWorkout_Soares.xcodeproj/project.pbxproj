@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B1F7F941F434F0D0089286E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1F7F931F434F0D0089286E /* TableViewController.swift */; };
 		9B5A31B91F3CA37700CAC48E /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5A31B51F3CA37700CAC48E /* EditView.swift */; };
 		9B5A31BA1F3CA37700CAC48E /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5A31B61F3CA37700CAC48E /* WorkoutsView.swift */; };
 		9B5A31BB1F3CA37700CAC48E /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5A31B71F3CA37700CAC48E /* Shared.swift */; };
@@ -29,7 +30,6 @@
 		9B77FBF71F1D0887008BAC33 /* gishabd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B77FBEF1F1D0887008BAC33 /* gishabd.ttf */; };
 		9B77FBF81F1D0887008BAC33 /* icon_watch.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B77FBF01F1D0887008BAC33 /* icon_watch.png */; };
 		9B77FBF91F1D0887008BAC33 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B77FBF11F1D0887008BAC33 /* icon.png */; };
-		9B77FBFA1F1D0887008BAC33 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B77FBF21F1D0887008BAC33 /* Info.plist */; };
 		9B77FBFB1F1D0887008BAC33 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B77FBF31F1D0887008BAC33 /* logo.png */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +76,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9B1F7F931F434F0D0089286E /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		9B5A31B51F3CA37700CAC48E /* EditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		9B5A31B61F3CA37700CAC48E /* WorkoutsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
 		9B5A31B71F3CA37700CAC48E /* Shared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
@@ -102,7 +103,6 @@
 		9B77FBEF1F1D0887008BAC33 /* gishabd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = gishabd.ttf; path = igMadWorkout_Soares/Image/gishabd.ttf; sourceTree = "<group>"; };
 		9B77FBF01F1D0887008BAC33 /* icon_watch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_watch.png; path = igMadWorkout_Soares/Image/icon_watch.png; sourceTree = "<group>"; };
 		9B77FBF11F1D0887008BAC33 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = igMadWorkout_Soares/Image/icon.png; sourceTree = "<group>"; };
-		9B77FBF21F1D0887008BAC33 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = igMadWorkout_Soares/Image/Info.plist; sourceTree = "<group>"; };
 		9B77FBF31F1D0887008BAC33 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = igMadWorkout_Soares/Image/logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,15 +150,16 @@
 			isa = PBXGroup;
 			children = (
 				9B77FBB51F1D03FF008BAC33 /* AppDelegate.swift */,
+				9B1F7F931F434F0D0089286E /* TableViewController.swift */,
+				9B5A31B51F3CA37700CAC48E /* EditView.swift */,
+				9B5A31B81F3CA37700CAC48E /* InfoView.swift */,
+				9B5A31B61F3CA37700CAC48E /* WorkoutsView.swift */,
 				9B77FBB71F1D03FF008BAC33 /* ViewController.swift */,
+				9B5A31B71F3CA37700CAC48E /* Shared.swift */,
 				9B77FBB91F1D03FF008BAC33 /* Main.storyboard */,
 				9B77FBBC1F1D03FF008BAC33 /* Assets.xcassets */,
 				9B77FBBE1F1D03FF008BAC33 /* LaunchScreen.storyboard */,
 				9B77FBC11F1D03FF008BAC33 /* Info.plist */,
-				9B5A31B51F3CA37700CAC48E /* EditView.swift */,
-				9B5A31B61F3CA37700CAC48E /* WorkoutsView.swift */,
-				9B5A31B71F3CA37700CAC48E /* Shared.swift */,
-				9B5A31B81F3CA37700CAC48E /* InfoView.swift */,
 			);
 			path = igMadWorkout_Soares;
 			sourceTree = "<group>";
@@ -190,7 +191,6 @@
 				9B77FBEC1F1D0887008BAC33 /* bg.png */,
 				9B77FBF01F1D0887008BAC33 /* icon_watch.png */,
 				9B77FBF11F1D0887008BAC33 /* icon.png */,
-				9B77FBF21F1D0887008BAC33 /* Info.plist */,
 				9B77FBF31F1D0887008BAC33 /* logo.png */,
 			);
 			name = Images;
@@ -321,7 +321,6 @@
 				9B77FBF51F1D0887008BAC33 /* CaviarDreams_Bold.ttf in Resources */,
 				9B77FBF41F1D0887008BAC33 /* bg.png in Resources */,
 				9B77FBBB1F1D03FF008BAC33 /* Main.storyboard in Resources */,
-				9B77FBFA1F1D0887008BAC33 /* Info.plist in Resources */,
 				9B77FBF71F1D0887008BAC33 /* gishabd.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B5A31BB1F3CA37700CAC48E /* Shared.swift in Sources */,
+				9B1F7F941F434F0D0089286E /* TableViewController.swift in Sources */,
 				9B77FBB81F1D03FF008BAC33 /* ViewController.swift in Sources */,
 				9B77FBB61F1D03FF008BAC33 /* AppDelegate.swift in Sources */,
 				9B5A31BA1F3CA37700CAC48E /* WorkoutsView.swift in Sources */,

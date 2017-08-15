@@ -2,8 +2,7 @@
 import UIKit
 import Foundation
 // ============================
-class EditView: UIViewController
-{
+class EditView: UIViewController, UITableViewDataSource, UITableViewDelegate {
     // ============================
     @IBOutlet weak var theTableView: UITableView!
     @IBOutlet weak var addExerciseField: UITextField!
@@ -39,7 +38,7 @@ class EditView: UIViewController
         return self.exerciseAccountability.count
     }
     //-------------
-    func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let intIndex = indexPath.row
         let index = self.exerciseAccountability.index(self.exerciseAccountability.startIndex, offsetBy: intIndex)
@@ -54,7 +53,7 @@ class EditView: UIViewController
         return cell
     }
     //-------------
-    func tableView(_ tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: IndexPath)
+    func tableView(_ tableView: UITableView, commitforRowAtEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: IndexPath)
     {
         if editingStyle == UITableViewCellEditingStyle.delete
         {

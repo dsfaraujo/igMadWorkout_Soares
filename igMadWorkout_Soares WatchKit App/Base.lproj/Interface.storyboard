@@ -14,15 +14,44 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="igMadWorkout_Soares_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Label" numberOfLines="50" id="nuZ-PV-8E6"/>
+                        <separator alignment="left" id="qTV-7A-bjy">
+                            <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
+                        <imageView alignment="left" image="logo" id="Y7k-WG-zyu"/>
+                        <separator alignment="left" id="oZX-Y5-5eC">
+                            <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
+                        <table alignment="left" id="aJh-1s-n3b">
+                            <items>
+                                <tableRow id="sYD-d7-eiD">
+                                    <group key="rootItem" width="1" alignment="left" id="JqI-Ec-m4q"/>
+                                </tableRow>
+                            </items>
+                        </table>
                     </items>
-                    <color key="backgroundColor" red="1" green="0.2952063687" blue="0.2364931921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <connections>
-                        <outlet property="messageLabel" destination="nuZ-PV-8E6" id="BNG-8I-RIL"/>
-                    </connections>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </controller>
             </objects>
             <point key="canvasLocation" x="115" y="80"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="cdP-v3-aNn">
+            <objects>
+                <controller id="yvU-7o-LnL">
+                    <items>
+                        <separator alignment="left" id="MaG-N8-MHf">
+                            <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
+                        <imageView alignment="left" image="logo" id="tZW-Pa-HDx"/>
+                        <separator alignment="left" id="0kl-tC-Uac">
+                            <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
+                        <label alignment="left" text="Label" id="QJF-KA-9MW"/>
+                    </items>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="369" y="80"/>
         </scene>
     </scenes>
 </document>
