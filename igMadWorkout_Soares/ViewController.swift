@@ -33,18 +33,19 @@ class ViewController: UIViewController, WCSessionDelegate, UIPickerViewDelegate,
         thePickerView.delegate = self
         thePickerView.dataSource = self
         
-       /* if (WCSession.isSupported())
+       if (WCSession.isSupported())
         {
             session = WCSession.default()
             session!.delegate = self
             session!.activate()
          
-        }*/
+        }
         
         self.theExercise = ""
         Shared.sharedInstance.saveOrLoadUserDefaults("db")
         self.thePickerView.selectRow(0, inComponent: 0, animated: false)
-        self.saveUserDefaultIfNeeded()    }
+        self.saveUserDefaultIfNeeded()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -73,15 +74,18 @@ class ViewController: UIViewController, WCSessionDelegate, UIPickerViewDelegate,
     // ============================
     @IBAction func sendToWatch(_ sender: AnyObject)
     {
+        Shared.sharedInstance.saveOrLoadUserDefaults("db")
+        self.saveUserDefaultIfNeeded()
+        
         var dictToSendWatch: [String: String] = [:]
         
         for aWorkout in Shared.sharedInstance.theDatabase{
             let aDate = aWorkout.0
-            let aExercise = aWorkout.1
+            let exercises = aWorkout.1
             var str = ""
             for i in 0..<exercises.count {
                 let exerc = Array(exercises[i].keys)[0]
-                str += "\(exercises[i][exerc]!)\n"
+                str += "\(exerc) : \(exercises[i][exerc]!)\n"
             }
             dictToSendWatch[aDate] = str
         }
@@ -94,7 +98,7 @@ class ViewController: UIViewController, WCSessionDelegate, UIPickerViewDelegate,
         }
     }
      // ============================
-    func sendMessage(){
+    func sendMessage(aDict: [String : String]){
         //-----------
         // Message envoyé par le téléphone
         let messageToSend = ["Message" : aDict]
@@ -125,6 +129,8 @@ class ViewController: UIViewController, WCSessionDelegate, UIPickerViewDelegate,
         
         self.theRepsField.text = ""
         self.theSetsField.text = ""
+        
+        
     }
     // ============================
     fileprivate func saveUserDefaultIfNeeded()

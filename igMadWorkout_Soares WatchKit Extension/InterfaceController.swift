@@ -11,11 +11,12 @@ import Foundation
 import WatchConnectivity
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
-
+    //--------------------------------------------------
     @IBOutlet var table: WKInterfaceTable!
+    //--------------------------------------------------
     var data: [String : String] = [:]
     var dates: [String] = []
-    var workkouts: [String] = []
+    var workouts: [String] = []
     //-----------
     var session : WCSession!
    //--------------------------------------------------
@@ -53,7 +54,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         userDefaultManager()
         //-----------
         self.dates = Array(data.keys)
-        self.workkouts = Array(data.values)
+        self.workouts = Array(data.values)
         tableRefresh()
     }
     //--------------------------------------------------
@@ -73,7 +74,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
            self.data = value!
             UserDefaults.standard.set(self.data, forKey: "data")
             self.dates = Array(value!.keys)
-            self.workkouts = Array(value!.values)
+            self.workouts = Array(value!.values)
             self.tableRefresh()
             
         }
@@ -83,7 +84,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     //--------------------------------------------------
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
-        self.pushController(withName: "page2", context: ["workout": workkouts[rowIndex]])
+        self.pushController(withName: "page2", context: ["workout": workouts[rowIndex]])
     }
     //--------------------------------------------------
    

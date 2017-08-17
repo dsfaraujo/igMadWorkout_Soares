@@ -20,10 +20,10 @@
                         <table alignment="left" id="aJh-1s-n3b">
                             <items>
                                 <tableRow identifier="row" id="sYD-d7-eiD" customClass="tableRowController" customModule="igMadWorkout_Soares_WatchKit_Extension">
-                                    <group key="rootItem" width="1" alignment="left" id="JqI-Ec-m4q">
+                                    <group key="rootItem" width="1" height="22" alignment="left" id="JqI-Ec-m4q">
                                         <items>
                                             <label height="13" alignment="left" verticalAlignment="center" text="Dates" id="CtM-F5-Fpm">
-                                                <fontDescription key="font" type="system" pointSize="13"/>
+                                                <fontDescription key="font" type="system" pointSize="11"/>
                                             </label>
                                         </items>
                                     </group>
@@ -34,7 +34,7 @@
                             </items>
                         </table>
                     </items>
-                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.18823529411764706" green="0.23921568627450981" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="table" destination="aJh-1s-n3b" id="CII-Yn-Ue2"/>
                     </connections>
@@ -51,10 +51,10 @@
                         <imageView alignment="left" image="logo" id="tZW-Pa-HDx"/>
                         <group width="1" height="2" alignment="left" id="LAo-C3-R3R"/>
                         <label width="128" alignment="center" text="Label" numberOfLines="100" id="QJF-KA-9MW">
-                            <fontDescription key="font" type="system" pointSize="13"/>
+                            <fontDescription key="font" type="system" pointSize="11"/>
                         </label>
                     </items>
-                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.18823529410000001" green="0.23921568630000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="displayLabel" destination="QJF-KA-9MW" id="opW-Bx-efU"/>
                     </connections>
