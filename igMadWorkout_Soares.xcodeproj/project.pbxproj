@@ -42,7 +42,6 @@
 		9B4A779A1F4603700025503C /* Icon-167.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4A777E1F4603700025503C /* Icon-167.png */; };
 		9B4A779B1F4603700025503C /* Icon-172.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4A777F1F4603700025503C /* Icon-172.png */; };
 		9B4A779C1F4603700025503C /* Icon-180.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4A77801F4603700025503C /* Icon-180.png */; };
-		9B4A779D1F4603700025503C /* Icon-196.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4A77811F4603700025503C /* Icon-196.png */; };
 		9B4A779E1F4603700025503C /* Icon-256.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4A77821F4603700025503C /* Icon-256.png */; };
 		9B4A779F1F4603700025503C /* Icon-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4A77831F4603700025503C /* Icon-512.png */; };
 		9B4A77A01F4603700025503C /* Icon-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4A77841F4603700025503C /* Icon-1024.png */; };
@@ -147,7 +146,6 @@
 		9B4A777E1F4603700025503C /* Icon-167.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-167.png"; path = "igMadWorkout_Soares/Image/appiconmaker.co_ios/Icon-167.png"; sourceTree = "<group>"; };
 		9B4A777F1F4603700025503C /* Icon-172.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-172.png"; path = "igMadWorkout_Soares/Image/appiconmaker.co_ios/Icon-172.png"; sourceTree = "<group>"; };
 		9B4A77801F4603700025503C /* Icon-180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-180.png"; path = "igMadWorkout_Soares/Image/appiconmaker.co_ios/Icon-180.png"; sourceTree = "<group>"; };
-		9B4A77811F4603700025503C /* Icon-196.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-196.png"; path = "igMadWorkout_Soares/Image/appiconmaker.co_ios/Icon-196.png"; sourceTree = "<group>"; };
 		9B4A77821F4603700025503C /* Icon-256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-256.png"; path = "igMadWorkout_Soares/Image/appiconmaker.co_ios/Icon-256.png"; sourceTree = "<group>"; };
 		9B4A77831F4603700025503C /* Icon-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-512.png"; path = "igMadWorkout_Soares/Image/appiconmaker.co_ios/Icon-512.png"; sourceTree = "<group>"; };
 		9B4A77841F4603700025503C /* Icon-1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-1024.png"; path = "igMadWorkout_Soares/Image/appiconmaker.co_ios/Icon-1024.png"; sourceTree = "<group>"; };
@@ -225,7 +223,6 @@
 				9B4A777E1F4603700025503C /* Icon-167.png */,
 				9B4A777F1F4603700025503C /* Icon-172.png */,
 				9B4A77801F4603700025503C /* Icon-180.png */,
-				9B4A77811F4603700025503C /* Icon-196.png */,
 				9B4A77821F4603700025503C /* Icon-256.png */,
 				9B4A77831F4603700025503C /* Icon-512.png */,
 				9B4A77841F4603700025503C /* Icon-1024.png */,
@@ -472,7 +469,6 @@
 				9B4A778B1F4603700025503C /* Icon-55.png in Resources */,
 				9B4A779B1F4603700025503C /* Icon-172.png in Resources */,
 				9B4A77871F4603700025503C /* Icon-32.png in Resources */,
-				9B4A779D1F4603700025503C /* Icon-196.png in Resources */,
 				9B4A77651F45F8060025503C /* Icon-88.png in Resources */,
 				9B4A77921F4603700025503C /* Icon-87.png in Resources */,
 				9B4A77961F4603700025503C /* Icon-120.png in Resources */,
