@@ -14,44 +14,53 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="igMadWorkout_Soares_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <separator alignment="left" id="qTV-7A-bjy">
-                            <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </separator>
+                        <group width="1" height="7" alignment="left" id="M1Z-sd-pgr"/>
                         <imageView alignment="left" image="logo" id="Y7k-WG-zyu"/>
-                        <separator alignment="left" id="oZX-Y5-5eC">
-                            <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </separator>
+                        <group width="1" height="2" alignment="left" id="x9K-wh-ooN"/>
                         <table alignment="left" id="aJh-1s-n3b">
                             <items>
-                                <tableRow id="sYD-d7-eiD">
-                                    <group key="rootItem" width="1" alignment="left" id="JqI-Ec-m4q"/>
+                                <tableRow identifier="row" id="sYD-d7-eiD" customClass="tableRowController" customModule="igMadWorkout_Soares_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="JqI-Ec-m4q">
+                                        <items>
+                                            <label height="13" alignment="left" verticalAlignment="center" text="Dates" id="CtM-F5-Fpm">
+                                                <fontDescription key="font" type="system" pointSize="13"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="dates" destination="CtM-F5-Fpm" id="gsH-Se-KZj"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="table" destination="aJh-1s-n3b" id="CII-Yn-Ue2"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="115" y="80"/>
         </scene>
-        <!--Interface Controller-->
+        <!--page2-->
         <scene sceneID="cdP-v3-aNn">
             <objects>
-                <controller id="yvU-7o-LnL">
+                <controller identifier="page2" id="yvU-7o-LnL" customClass="WorkoutController" customModule="igMadWorkout_Soares_WatchKit_Extension">
                     <items>
-                        <separator alignment="left" id="MaG-N8-MHf">
-                            <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </separator>
+                        <group width="1" height="2" alignment="left" id="e1M-Bv-sN0"/>
                         <imageView alignment="left" image="logo" id="tZW-Pa-HDx"/>
-                        <separator alignment="left" id="0kl-tC-Uac">
-                            <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </separator>
-                        <label alignment="left" text="Label" id="QJF-KA-9MW"/>
+                        <group width="1" height="2" alignment="left" id="LAo-C3-R3R"/>
+                        <label width="128" alignment="center" text="Label" numberOfLines="100" id="QJF-KA-9MW">
+                            <fontDescription key="font" type="system" pointSize="13"/>
+                        </label>
                     </items>
                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="displayLabel" destination="QJF-KA-9MW" id="opW-Bx-efU"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="369" y="80"/>
+            <point key="canvasLocation" x="324" y="80"/>
         </scene>
     </scenes>
 </document>

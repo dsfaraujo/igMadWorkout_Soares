@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>igMadWorkout_Soares WatchKit App</string>
+	<string>MadWorkout</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -20,6 +20,12 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>CaviarDreams_Bold.ttf</string>
+		<string>GeosansLight.ttf</string>
+		<string>gishabd.ttf</string>
+	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -27,12 +33,6 @@
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
 	<string>C1.igMadWorkout-Soares</string>
-	<key>UIAppFonts</key>
-	<array>
-		<string>CaviarDreams_Bold.ttf</string>
-		<string>GeosansLight.ttf</string>
-		<string>gishabd.ttf</string>
-	</array>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>

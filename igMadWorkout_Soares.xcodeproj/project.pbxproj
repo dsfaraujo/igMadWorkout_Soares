@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9B1F7F941F434F0D0089286E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1F7F931F434F0D0089286E /* TableViewController.swift */; };
+		9B4A771E1F45D9580025503C /* TableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A771D1F45D9580025503C /* TableRowController.swift */; };
+		9B4A77201F45DA9B0025503C /* WorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A771F1F45DA9B0025503C /* WorkoutController.swift */; };
 		9B5A31B91F3CA37700CAC48E /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5A31B51F3CA37700CAC48E /* EditView.swift */; };
 		9B5A31BA1F3CA37700CAC48E /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5A31B61F3CA37700CAC48E /* WorkoutsView.swift */; };
 		9B5A31BB1F3CA37700CAC48E /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5A31B71F3CA37700CAC48E /* Shared.swift */; };
@@ -77,6 +79,8 @@
 
 /* Begin PBXFileReference section */
 		9B1F7F931F434F0D0089286E /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		9B4A771D1F45D9580025503C /* TableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableRowController.swift; sourceTree = "<group>"; };
+		9B4A771F1F45DA9B0025503C /* WorkoutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutController.swift; sourceTree = "<group>"; };
 		9B5A31B51F3CA37700CAC48E /* EditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		9B5A31B61F3CA37700CAC48E /* WorkoutsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
 		9B5A31B71F3CA37700CAC48E /* Shared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
@@ -179,8 +183,10 @@
 			children = (
 				9B77FBD81F1D03FF008BAC33 /* InterfaceController.swift */,
 				9B77FBDA1F1D03FF008BAC33 /* ExtensionDelegate.swift */,
+				9B4A771F1F45DA9B0025503C /* WorkoutController.swift */,
 				9B77FBDC1F1D03FF008BAC33 /* Assets.xcassets */,
 				9B77FBDE1F1D03FF008BAC33 /* Info.plist */,
+				9B4A771D1F45D9580025503C /* TableRowController.swift */,
 			);
 			path = "igMadWorkout_Soares WatchKit Extension";
 			sourceTree = "<group>";
@@ -364,6 +370,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B77FBDB1F1D03FF008BAC33 /* ExtensionDelegate.swift in Sources */,
+				9B4A77201F45DA9B0025503C /* WorkoutController.swift in Sources */,
+				9B4A771E1F45D9580025503C /* TableRowController.swift in Sources */,
 				9B77FBD91F1D03FF008BAC33 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

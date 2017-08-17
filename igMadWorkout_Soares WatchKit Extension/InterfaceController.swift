@@ -11,11 +11,31 @@ import Foundation
 import WatchConnectivity
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
-    @IBOutlet var messageLabel: WKInterfaceLabel!
-    var session : WCSession!
+
+    @IBOutlet var table: WKInterfaceTable!
+    var data: [String : String] = [:]
+    var dates: [String] = []
+    var workkouts: [String] = []
     //-----------
-    var conversation: String = ""
-    //--------------------------------------------------
+    var session : WCSession!
+   //--------------------------------------------------
+    func userDefaultManager() {
+        if UserDefaults.standard.object(forKey: "data") == nil {
+            UserDefaults.standard.set(data, forKey: "data")
+        }
+        else{
+            data = UserDefaults.standard.object(forKey: "data") as! [String: String]
+        }
+    }
+  //--------------------------------------------------
+    func tableRefresh(){
+        table.setNumberOfRows(data.count, withRowType: "row")
+        for index in 0..<table.numberOfRows{
+            let row = table.rowController(at: index) as! tableRowController
+            row.dates.setText(dates[index])
+        }
+    }
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
     }
@@ -30,6 +50,11 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             session.activate()
         }
         //-----------
+        userDefaultManager()
+        //-----------
+        self.dates = Array(data.keys)
+        self.workkouts = Array(data.values)
+        tableRefresh()
     }
     //--------------------------------------------------
     override func didDeactivate() {
@@ -42,29 +67,23 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         //-----------
         // Message du téléphone
-        let value = message["Message"] as? String
-        conversation += value!
+        let value = message["Message"] as? [String : String]
         //-----------
         DispatchQueue.main.async { () -> Void in
-            // Affichage sur montre
-            self.messageLabel.setText(self.conversation)
+           self.data = value!
+            UserDefaults.standard.set(self.data, forKey: "data")
+            self.dates = Array(value!.keys)
+            self.workkouts = Array(value!.values)
+            self.tableRefresh()
+            
         }
         //-----------
-        replyHandler(["Message" : conversation])
+        //replyHandler(["Message" : conversation])
         //-----------
     }
     //--------------------------------------------------
-    func sendMessage() {
-        presentTextInputController(withSuggestions: ["Bonjour"], allowedInputMode: WKTextInputMode.plain,
-                                   completion: {(results) -> Void in
-                                    if results != nil && results!.count > 0 {
-                                        let aResult = results?[0] as? String
-                                        self.conversation += "Watch : \(aResult!)\n\n"
-                                        self.messageLabel.setText(self.conversation)
-                                        self.session.sendMessage(["Message" : self.conversation],
-                                                                 replyHandler: {replyMessage in}, errorHandler: {error in print(error)})
-                                    }
-        })
+    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
+        self.pushController(withName: "page2", context: ["workout": workkouts[rowIndex]])
     }
     //--------------------------------------------------
    
