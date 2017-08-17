@@ -2,7 +2,7 @@
 import UIKit
 import Foundation
 // ============================
-class EditView: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class EditView: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     // ============================
     @IBOutlet weak var theTableView: UITableView!
     @IBOutlet weak var addExerciseField: UITextField!
@@ -13,6 +13,7 @@ class EditView: UIViewController, UITableViewDataSource, UITableViewDelegate {
     {
         super.viewDidLoad()
         self.exerciseAccountability = self.exerciseAccount.value(forKey: "exercises") as! [String : Int]
+        self.addExerciseField.delegate = self;
     }
     // ============================
     override func didReceiveMemoryWarning()
@@ -65,7 +66,7 @@ class EditView: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
     }
     //-------------
-    func textFieldShouldReturn(_ textField: UITextField!) -> Bool
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
         textField.resignFirstResponder()
         return true
@@ -80,5 +81,6 @@ class EditView: UIViewController, UITableViewDataSource, UITableViewDelegate {
         self.present(alertController, animated: true, completion: nil)
     }
     //-------------
+  
 }
 // ============================
