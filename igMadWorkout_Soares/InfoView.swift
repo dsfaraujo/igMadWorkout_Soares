@@ -1,13 +1,13 @@
 // ============================
 import UIKit
 // ============================
+//classe pour la view InfoView
 class InfoView: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // ============================
     @IBOutlet weak var infoDateLabel: UILabel!
     @IBOutlet weak var theTableView: UITableView!
     @IBOutlet weak var reorderButton: UIButton!
-
-    
+    // ============================
     var theDatabase: [String : [[String : String]]]!
     var theWorkout: [String]!
     // ============================
@@ -19,7 +19,7 @@ class InfoView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.theWorkout = self.fillUpWorkoutArray(self.infoDateLabel.text!)
     }
     // ============================
-
+    //bouton pour changer d'ordre les valeurs de la table
     @IBAction func reorder(_ sender: UIButton) {
         if !self.theTableView.isEditing
         {
@@ -32,7 +32,7 @@ class InfoView: UIViewController, UITableViewDelegate, UITableViewDataSource {
             self.reorderButton.setTitle("EDIT", for: UIControlState())
         }
     }
-
+    //fonction que faire le ramplissage d'un array d'exercices
     // ============================
     func fillUpWorkoutArray(_ theDate: String) -> [String]
     {
@@ -54,6 +54,7 @@ class InfoView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         return arrToReturn
     }
+    //fonction pour prendre les dates
     // ============================
     func getDates() -> [String]
     {
@@ -68,17 +69,20 @@ class InfoView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         return tempArray
     }
+    //fonction constructeur de didReceiveMemoryWarning()
     // ============================
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
     }
+    //fonction pour l'initialisation de la tableView
     // ============================
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         self.theTableView.backgroundColor = UIColor.clear
         return self.theWorkout.count
     }
     // ============================
+    //fonction pour ajouter le style de la tableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier:"cell")
@@ -91,6 +95,7 @@ class InfoView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     // ============================
+    //fonction pour metre les données dans la tableView
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCellEditingStyle.delete
         {
@@ -100,6 +105,7 @@ class InfoView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     // ============================
+    //fonction pour effacer une exercice dans la base des données
     func deleteFromDatabase(_ theDate: String, indexToDelete: Int)
     {
         for (a, b) in self.theDatabase
@@ -116,12 +122,14 @@ class InfoView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     // ============================
+    //fontion pour changer les rangées de la tableView
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool
     {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
     // ============================
+    //fontion pour changer les rangées de la tableView
     @objc(tableView:moveRowAtIndexPath:toIndexPath:) func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to toIndexPath: IndexPath)
     {
         let itemToMove = self.theDatabase[self.infoDateLabel.text!]?[fromIndexPath.row]

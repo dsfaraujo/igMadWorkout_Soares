@@ -2,6 +2,7 @@
 import UIKit
 import Foundation
 // ============================
+//classe pour la view EditView
 class EditView: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     // ============================
     @IBOutlet weak var theTableView: UITableView!
@@ -21,6 +22,7 @@ class EditView: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         super.didReceiveMemoryWarning()
     }
     // ============================
+    //bouton pour ajouter un exercice
     @IBAction func addExerciseButton(_ sender: UIButton)
     {
         if self.addExerciseField.text != ""
@@ -32,6 +34,7 @@ class EditView: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
             self.mAlterts("Exercise Added!")
         }
     }
+    //fonction pour le mise à jour de la tableView
     // ============================
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -39,6 +42,7 @@ class EditView: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         return self.exerciseAccountability.count
     }
     //-------------
+    //fonction pour le ramplissage de la tableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let intIndex = indexPath.row
@@ -54,6 +58,7 @@ class EditView: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         return cell
     }
     //-------------
+    //fonction pour le style de la tableView
     func tableView(_ tableView: UITableView, commitforRowAtEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: IndexPath)
     {
         if editingStyle == UITableViewCellEditingStyle.delete
@@ -66,12 +71,14 @@ class EditView: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         }
     }
     //-------------
+    //fonction pour le textField
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
         textField.resignFirstResponder()
         return true
     }
     //-------------
+    //fonction pour les alertes de la page
     func mAlterts(_ theMessage: String)
     {
         let alertController = UIAlertController(title: "Message...", message:
