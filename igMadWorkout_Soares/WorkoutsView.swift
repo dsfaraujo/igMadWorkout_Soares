@@ -1,6 +1,7 @@
 // ============================
 import UIKit
 // ============================
+//classe pour le view WorkoutsView
 class WorkoutsView: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
@@ -13,6 +14,7 @@ class WorkoutsView: UIViewController, UITableViewDelegate, UITableViewDataSource
         self.theDatabase = Shared.sharedInstance.getDatabase("db")
     }
     // ============================
+    //fonction pour prendre les dates
     func getDates() -> [String]
     {
         var tempArray = [""]
@@ -32,11 +34,13 @@ class WorkoutsView: UIViewController, UITableViewDelegate, UITableViewDataSource
         super.didReceiveMemoryWarning()
     }
     // ============================
+    // fonction pour prendre la taille de la tableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return self.theDatabase.count
     }
     // ============================
+    //fonction pour ramplir la tableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier:"cell")
@@ -49,6 +53,7 @@ class WorkoutsView: UIViewController, UITableViewDelegate, UITableViewDataSource
         return cell
     }
     // ============================
+    //fonction pour avoir l'option de selection de la tableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         let selectedCell:UITableViewCell = tableView.cellForRow(at: indexPath)!
@@ -57,6 +62,7 @@ class WorkoutsView: UIViewController, UITableViewDelegate, UITableViewDataSource
         performSegue(withIdentifier: "theSegway", sender: nil)
     }
     // ============================
+    //fonction pour l'edition de la tableView
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
     {
         if editingStyle == UITableViewCellEditingStyle.delete

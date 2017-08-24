@@ -5,11 +5,12 @@
 //  Created by eleves on 2017-07-17.
 //  Copyright © 2017 Diana. All rights reserved.
 //
-
+//=================================
 import WatchKit
 import Foundation
 import WatchConnectivity
-
+//=================================
+//classe pour la connexion avec l'interface de la montre
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
     //--------------------------------------------------
     @IBOutlet var table: WKInterfaceTable!
@@ -28,7 +29,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             data = UserDefaults.standard.object(forKey: "data") as! [String: String]
         }
     }
-  //--------------------------------------------------
+    //--------------------------------------------------
+    //fonction refresh la tableView de la montre
     func tableRefresh(){
         table.setNumberOfRows(data.count, withRowType: "row")
         for index in 0..<table.numberOfRows{
@@ -41,6 +43,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         super.awake(withContext: context)
     }
     //--------------------------------------------------
+    //fonction pour activer la session avec la montre
     override func willActivate() {
         //-----------
         super.willActivate()
@@ -58,13 +61,16 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         tableRefresh()
     }
     //--------------------------------------------------
+    //fonction de arreter la connexion avec la montre
     override func didDeactivate() {
         super.didDeactivate()
     }
+    //connexion avec l'apple watch
     @available(watchOS 2.2, *)
     public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         //..code
     }
+    //fonction de activation des sessions de la montre
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         //-----------
         // Message du téléphone
@@ -83,9 +89,11 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         //-----------
     }
     //--------------------------------------------------
+    //fonction de mise à jour de la tableView dans la montre
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
         self.pushController(withName: "page2", context: ["workout": workouts[rowIndex]])
     }
     //--------------------------------------------------
    
 }
+//=================================
